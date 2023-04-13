@@ -16,12 +16,12 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function countCats(array) {
   let count = 0;
-  let newArr = array.flat();
- newArr.forEach((item) => {if (item === '^^'){count++}});
+ array.forEach(element => { element.forEach((item) => {if (item === '^^'){count++;}})});
  
   return count;
 }
 
+
 module.exports = {
-  countCats 
+  countCats
 };
